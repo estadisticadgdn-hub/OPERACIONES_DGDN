@@ -99,6 +99,39 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
+        /* Contenedor de sistemas */
+.botones-sistemas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Botón Monitor de Consignas */
+.btn-monitor {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    padding: 16px 32px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Efecto al pasar el mouse */
+.btn-monitor:hover {
+    background-color: var(--navy);
+    color: var(--white);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
     </style>
 </head>
 <body>
@@ -112,7 +145,29 @@
         
          <!-- ¡ATENCIÓN! Reemplaza el # por el enlace real al que debe dirigir el botón -->
          <!-- BOTÓN DE INGRESO CENTRAL -->
-         <a href="https://script.google.com/macros/s/AKfycbxw-bFsLEp9zH8IgRzS9D0jgjZPp5u-N6FFtvTEv7WHkl3kPgZ4q-_DgwIh1Bi2xDt7oQ/exec" class="btn-ingreso" target="_blank" rel="noopener noreferrer">INGRESO AL SISTEMA</a>
+         <div class="botones-sistemas">
+
+    <!-- SISTEMA PRINCIPAL -->
+    <a
+        href="https://script.google.com/macros/s/AKfycbxw-bFsLEp9zH8IgRzS9D0jgjZPp5u-N6FFtvTEv7WHkl3kPgZ4q-_DgwIh1Bi2xDt7oQ/exec"
+        class="btn-ingreso"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        INGRESO AL SISTEMA
+    </a>
+
+    <!-- MONITOR DE CONSIGNAS URD -->
+    <a
+        href="https://script.google.com/macros/s/AKfycbyP-XmWBbD9LmxbRPncKFF6wAGWkzHarkwGb2YdIIPNcs5FY_kEdfHRLOxiiTrozv6m7A/exec"
+        class="btn-monitor"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        MONITOR DE CONSIGNAS URD
+    </a>
+
+</div>
     </main>
 
 </body>
