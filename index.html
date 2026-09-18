@@ -17,6 +17,7 @@
             --gold: #c8a84b;
             --cream: #f5f0e8;
             --white: #ffffff;
+            --spring: #2f7d5c;
         }
 
         body {
@@ -75,29 +76,85 @@
             text-transform: uppercase;
         }
 
-        /* Botón de Ingreso Central */
-        .btn-ingreso {
-            display: inline-block;
-            background-color: var(--navy);
-            color: var(--white);
-            text-decoration: none;
-            padding: 16px 32px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+               /* ===== BOTONES DE SISTEMAS ===== */
+        .botones-sistemas {
             width: 100%;
-            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
         }
 
+        /* Etiqueta separadora de grupos */
+        .grupo-titulo {
+            margin: 4px 0 -4px 0;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #9a9a9a;
+            text-align: left;
+        }
+
+        /* Base común para todos los botones */
+        .btn {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 16px 24px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.02rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 1. Sistema principal */
+        .btn-ingreso {
+            background-color: var(--navy);
+            color: var(--white);
+        }
         .btn-ingreso:hover {
             background-color: var(--gold);
             color: var(--navy);
             border-color: var(--navy);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 2. Monitor URD */
+        .btn-monitor {
+            background-color: var(--gold);
+            color: var(--navy);
+        }
+        .btn-monitor:hover {
+            background-color: var(--navy);
+            color: var(--white);
+            border-color: var(--gold);
+        }
+
+        /* 3. Festejos Primavera */
+        .btn-festejos {
+            background-color: var(--spring);
+            color: var(--white);
+        }
+        .btn-festejos:hover {
+            background-color: var(--navy);
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* Ajuste para celulares */
+        @media (max-width: 420px) {
+            .btn { padding: 14px 16px; font-size: 0.95rem; }
+        }
         }
         /* Contenedor de sistemas */
 .botones-sistemas {
@@ -147,27 +204,42 @@
          <!-- BOTÓN DE INGRESO CENTRAL -->
          <div class="botones-sistemas">
 
-    <!-- SISTEMA PRINCIPAL -->
-    <a
-        href="https://script.google.com/macros/s/AKfycbxw-bFsLEp9zH8IgRzS9D0jgjZPp5u-N6FFtvTEv7WHkl3kPgZ4q-_DgwIh1Bi2xDt7oQ/exec"
-        class="btn-ingreso"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        INGRESO CARGA DE CONSIGNAS
-    </a>
+             <p class="grupo-titulo">Sistemas</p>
 
-    <!-- MONITOR DE CONSIGNAS URD -->
-    <a
-        href="https://script.google.com/macros/s/AKfycbyP-XmWBbD9LmxbRPncKFF6wAGWkzHarkwGb2YdIIPNcs5FY_kEdfHRLOxiiTrozv6m7A/exec"
-        class="btn-monitor"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        MONITOR DE CONSIGNAS URD
-    </a>
+             <!-- SISTEMA PRINCIPAL -->
+             <a
+                 href="https://script.google.com/macros/s/AKfycbxw-bFsLEp9zH8IgRzS9D0jgjZPp5u-N6FFtvTEv7WHkl3kPgZ4q-_DgwIh1Bi2xDt7oQ/exec"
+                 class="btn btn-ingreso"
+                 target="_blank"
+                 rel="noopener noreferrer"
+             >
+                 INGRESO CARGA DE CONSIGNAS
+             </a>
 
-</div>
+             <!-- MONITOR DE CONSIGNAS URD -->
+             <a
+                 href="https://script.google.com/macros/s/AKfycbyP-XmWBbD9LmxbRPncKFF6wAGWkzHarkwGb2YdIIPNcs5FY_kEdfHRLOxiiTrozv6m7A/exec"
+                 class="btn btn-monitor"
+                 target="_blank"
+                 rel="noopener noreferrer"
+             >
+                 MONITOR DE CONSIGNAS URD
+             </a>
+
+             <p class="grupo-titulo">Eventos</p>
+
+             <!-- FESTEJOS PRIMAVERA DGDN -->
+             <!-- Reemplazá el # por el enlace real -->
+             <a
+                 href="#"
+                 class="btn btn-festejos"
+                 target="_blank"
+                 rel="noopener noreferrer"
+             >
+                 FESTEJOS PRIMAVERA DGDN
+             </a>
+
+         </div>
     </main>
 
 </body>
