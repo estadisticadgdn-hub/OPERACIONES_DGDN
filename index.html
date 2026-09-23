@@ -17,7 +17,7 @@
             --gold: #c8a84b;
             --cream: #f5f0e8;
             --white: #ffffff;
-            --spring: #2f7d5c;
+            --storm: #1f5f7a;   /* ← NUEVO: azul tormenta para el Plan de Contingencia */
         }
 
         body {
@@ -150,7 +150,27 @@
             color: var(--gold);
             border-color: var(--gold);
         }
+        /* 4. Plan de Contingencia Hidrometeorológico */
+        .btn-contingencia {
+            background-color: var(--storm);
+            color: var(--white);
+        }
+        .btn-contingencia:hover {
+            background-color: var(--navy);
+            color: var(--white);
+            border-color: var(--storm);
+        }
 
+        /* Texto secundario dentro de un botón */
+        .btn-sub {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-transform: none;
+            opacity: 0.85;
+        }
         /* Ajuste para celulares */
         @media (max-width: 420px) {
             .btn { padding: 14px 16px; font-size: 0.95rem; }
@@ -225,7 +245,18 @@
              >
                  MONITOR DE CONSIGNAS URD
              </a>
+             <p class="grupo-titulo">Planes</p>
 
+             <!-- PLAN DE CONTINGENCIA HIDROMETEOROLÓGICO -->
+             <a
+                 href="https://script.google.com/macros/s/AKfycbzkKjcPlLx73QgnunJ3bvpLRSM9r4KW79D_Ir4TMLaGIb0wUpVeznR63UlpZTSVz5Kjkw/exec"
+                 class="btn btn-contingencia"
+                 target="_blank"
+                 rel="noopener noreferrer"
+             >
+                 PLAN DE CONTINGENCIA HIDROMETEOROLÓGICO
+                 <span class="btn-sub">Fenómeno El Niño · Modelo oficial de carga por dependencia</span>
+             </a>
              <p class="grupo-titulo">Eventos</p>
 
              <!-- FESTEJOS PRIMAVERA DGDN -->
